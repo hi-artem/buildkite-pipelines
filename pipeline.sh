@@ -20,13 +20,6 @@ steps:
 
   - wait
 
-  - label: "Test 'gcc'"
-    command: "gcc --version"
-    agents:
-    - *agent_queue
-
-  - wait
-
   - label: "List '/usr/bin'"
     command: "ls /usr/bin"
     agents:
