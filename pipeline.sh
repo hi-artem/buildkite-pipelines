@@ -23,5 +23,12 @@ steps:
   - label: "List '/usr/bin'"
     command: "ls /usr/bin"
     agents:
-    - *agent_queue
+      - *agent_queue
+
+  - wait
+
+  - label: "Test aws cli"
+    command: "aws sts get-caller-identity | jq .Arn"
+    agents:
+      - *agent_queue
 YML
