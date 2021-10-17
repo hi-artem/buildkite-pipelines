@@ -1,3 +1,7 @@
+agents:
+  queue: "kubernetes"
+agent_queue: &agent_queue "queue=kubernetes"
+
 steps:
   - label: "🔨 Create artifacts and generate provenance"
     command:
@@ -9,4 +13,6 @@ steps:
       - "build/*"
     plugins:
       - hi-artem/provenance-generator#v1.1.11:
+    agents:
+      - *agent_queue
           output-path: "provenance.json"
