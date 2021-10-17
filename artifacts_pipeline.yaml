@@ -8,5 +8,5 @@ steps:
     artifact_paths:
       - "build/*"
     plugins:
-      - hi-artem/provenance-generator#v1.1.13:
+      - hi-artem/provenance-generator#v1.1.14:
           output-path: "provenance.json"
