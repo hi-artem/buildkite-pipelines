@@ -13,6 +13,6 @@ steps:
       - "build/*"
     plugins:
       - hi-artem/provenance-generator#v1.1.11:
+          output-path: "provenance.json"
     agents:
       - *agent_queue
-          output-path: "provenance.json"
