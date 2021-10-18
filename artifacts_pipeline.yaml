@@ -1,7 +1,9 @@
 steps:
   - label: Run ls
     command:
-      - ls
+      - echo 'print(123)' > script.py
+      - python script.py > log.out
+      - cat log.out
 #steps:
 #  - label: "🔨 Create artifacts and generate provenance"
 #    command:
