@@ -1,18 +1,12 @@
 steps:
-  - label: Run ls
+  - label: "🔨 Create artifacts and generate provenance"
     command:
-      - echo 'print(123)' > script.py
-      - python3 script.py > log.out
-      - cat log.out
-#steps:
-#  - label: "🔨 Create artifacts and generate provenance"
-#    command:
-#      - "mkdir build"
-#      - "echo 'build artifact 1' > build/artifact1.txt"
-#      - "echo 'build artifact 2' > build/artifact2.txt"
-#      - "echo 'build artifact 2' > build/artifact3.txt"
-#    artifact_paths:
-#      - "build/*"
-#    plugins:
-#      - hi-artem/provenance-generator#v1.1.14:
-#          output-path: "provenance.json"
+      - "mkdir build"
+      - "echo 'build artifact 1' > build/artifact1.txt"
+      - "echo 'build artifact 2' > build/artifact2.txt"
+      - "echo 'build artifact 2' > build/artifact3.txt"
+    artifact_paths:
+      - "build/*"
+    plugins:
+      - hi-artem/provenance-generator#v1.1.14:
+          output-path: "provenance.json"
