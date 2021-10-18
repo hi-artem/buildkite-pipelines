@@ -1,12 +1,16 @@
 steps:
-  - label: "🔨 Create artifacts and generate provenance"
+  - label: Run ls
     command:
-      - "mkdir build"
-      - "echo 'build artifact 1' > build/artifact1.txt"
-      - "echo 'build artifact 2' > build/artifact2.txt"
-      - "echo 'build artifact 2' > build/artifact3.txt"
-    artifact_paths:
-      - "build/*"
-    plugins:
-      - hi-artem/provenance-generator#v1.1.14:
-          output-path: "provenance.json"
+      - ls
+#steps:
+#  - label: "🔨 Create artifacts and generate provenance"
+#    command:
+#      - "mkdir build"
+#      - "echo 'build artifact 1' > build/artifact1.txt"
+#      - "echo 'build artifact 2' > build/artifact2.txt"
+#      - "echo 'build artifact 2' > build/artifact3.txt"
+#    artifact_paths:
+#      - "build/*"
+#    plugins:
+#      - hi-artem/provenance-generator#v1.1.14:
+#          output-path: "provenance.json"
