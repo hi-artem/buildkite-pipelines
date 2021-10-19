@@ -10,5 +10,5 @@ echo "Steps:"
 
 for item in $LIST_TO_PRINT; do
     echo "  - label: 'Printing ${item}'"
-    echo "    command: echo '${item}'"
+    echo "    command: 'echo ${item}'"
 done
