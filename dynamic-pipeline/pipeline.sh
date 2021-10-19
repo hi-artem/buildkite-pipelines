@@ -6,7 +6,7 @@ if [[ -z "${LIST_TO_PRINT:-}" ]]; then
   LIST_TO_PRINT=":github:"
 fi
 
-echo "Steps:"
+echo "steps:"
 
 for item in $LIST_TO_PRINT; do
     echo "  - label: 'Printing ${item}'"
